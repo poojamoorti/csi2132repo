@@ -51,10 +51,12 @@
 
 <?php 
 
+
 if(isset($_POST['book'])){echo "<script>window.location.href='book.php';</script>";}
 
 if(isset($_POST['search'])){ // User is searching for hotels matching the above criteria
-    $databaseConnection = pg_connect("host=web0.site.uottawa.ca port=15432 dbname=group_a04_g35 user=gstpi022 password=Coolman440");
+    $databaseConnection = pg_connect("host=ec2-54-145-102-149.compute-1.amazonaws.com
+    dbname=d9n9b0bg5b894t port=5432 user=ygvmtvoyhmkdyz password=17306cd10c418d80fe35f1c7a60d4f576cafd1d4b14b5c885ddc2cd26bed0b20");
 
     $roomID = $_POST['roomID']; 
     if($roomID != null){ // User is searching usign roomID

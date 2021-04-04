@@ -50,8 +50,6 @@
     session_start();  
 
     if(isset($_POST['submit'])){
-        echo 'trying';
-        echo  (int) $_POST['roomID'];
         $roomID = (int) $_POST['roomID'];
         $customerID = (int) $_POST['customerID'];
         $hotelID = ceil($roomID/5);
