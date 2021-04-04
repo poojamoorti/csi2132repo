@@ -1,3 +1,10 @@
+<?php
+  $connection = pg_connect("host=ec2-54-145-102-149.compute-1.amazonaws.com
+    dbname=d9n9b0bg5b894t user=ygvmtvoyhmkdyz password=17306cd10c418d80fe35f1c7a60d4f576cafd1d4b14b5c885ddc2cd26bed0b20");
+  $stat = pg_connection_status($connection);
+?>
+
+
 <!DOCTYPE html>
     <html>
 
@@ -34,10 +41,12 @@
 
 
 <!-- PHP Logic -->
-<?php
-// https://www.php.net/manual/en/function.pg-connect.php
-  $databaseConnection = pg_connect("host=web0.site.uottawa.ca port=15432 dbname=group_a04_g35 user=user password=password");
 
+
+
+<?php
+  $connection = pg_connect("host=ec2-54-145-102-149.compute-1.amazonaws.com
+    dbname=d9n9b0bg5b894t port=5432 user=ygvmtvoyhmkdyz password=17306cd10c418d80fe35f1c7a60d4f576cafd1d4b14b5c885ddc2cd26bed0b20");
     session_start();  
 
     if(isset($_POST['submit'])){
